@@ -1,49 +1,68 @@
-Query: None Query ID: lcl|Query_9763 Length: 540
-
->Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/VA-DCLS-1091/2020, complete genome
-Sequence ID: MT981467.1 Length: 29867 
-Range 1: 230 to 769
-
-Score:998 bits(540), Expect:0.0, 
-Identities:540/540(100%),  Gaps:0/540(0%), Strand: Plus/Plus
-
-Query  1    ATGGAGAGCCTTGTCCCTGGTTTCAACGAGAAAACACACGTCCAACTCAGTTTGCCTGTT  60
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  230  ATGGAGAGCCTTGTCCCTGGTTTCAACGAGAAAACACACGTCCAACTCAGTTTGCCTGTT  289
-
-Query  61   TTACAGGTTCGCGACGTGCTCGTACGTGGCTTTGGAGACTCCGTGGAGGAGGTCTTATCA  120
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  290  TTACAGGTTCGCGACGTGCTCGTACGTGGCTTTGGAGACTCCGTGGAGGAGGTCTTATCA  349
-
-Query  121  GAGGCACGTCAACATCTTAAAGATGGCACTTGTGGCTTAGTAGAAGTTGAAAAAGGCGTT  180
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  350  GAGGCACGTCAACATCTTAAAGATGGCACTTGTGGCTTAGTAGAAGTTGAAAAAGGCGTT  409
-
-Query  181  TTGCCTCAACTTGAACAGCCCTATGTGTTCATCAAACGTTCGGATGCTCGAACTGCACCT  240
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  410  TTGCCTCAACTTGAACAGCCCTATGTGTTCATCAAACGTTCGGATGCTCGAACTGCACCT  469
-
-Query  241  CATGGTCATGTTATGGTTGAGCTGGTAGCAGAACTCGAAGGCATTCAGTACGGTCGTAGT  300
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  470  CATGGTCATGTTATGGTTGAGCTGGTAGCAGAACTCGAAGGCATTCAGTACGGTCGTAGT  529
-
-Query  301  GGTGAGACACTTGGTGTCCTTGTCCCTCATGTGGGCGAAATACCAGTGGCTTACCGCAAG  360
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  530  GGTGAGACACTTGGTGTCCTTGTCCCTCATGTGGGCGAAATACCAGTGGCTTACCGCAAG  589
-
-Query  361  GTTCTTCTTCGTAAGAACGGTAATAAAGGAGCTGGTGGCCATAGTTACGGCGCCGATCTA  420
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  590  GTTCTTCTTCGTAAGAACGGTAATAAAGGAGCTGGTGGCCATAGTTACGGCGCCGATCTA  649
-
-Query  421  AAGTCATTTGACTTAGGCGACGAGCTTGGCACTGATCCTTATGAAGATTTTCAAGAAAAC  480
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  650  AAGTCATTTGACTTAGGCGACGAGCTTGGCACTGATCCTTATGAAGATTTTCAAGAAAAC  709
-
-Query  481  TGGAACACTAAACATAGCAGTGGTGTTACCCGTGAACTCATGCGTGAGCTTAACGGAGGG  540
-            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Sbjct  710  TGGAACACTAAACATAGCAGTGGTGTTACCCGTGAACTCATGCGTGAGCTTAACGGAGGG  769
+Primer pair 1
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	CGTACGTGGCTTTGGAGACT	Plus	20	81	100	60.04	55.00	6.00	3.00
+Reverse primer	ACCATGAGGTGCAGTTCGAG	Minus	20	246	227	60.04	55.00	4.00	2.00
+Product length	166
 
 
+Primer pair 2
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	TCGTACGTGGCTTTGGAGAC	Plus	20	80	99	60.04	55.00	6.00	1.00
+Reverse primer	AGATCGGCGCCGTAACTATG	Minus	20	419	400	60.04	55.00	8.00	2.00
+Product length	340
 
 
+Primer pair 3
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	ACCGCAAGGTTCTTCTTCGT	Plus	20	353	372	59.89	50.00	3.00	0.00
+Reverse primer	CAAGCTCGTCGCCTAAGTCA	Minus	20	448	429	60.11	55.00	4.00	1.00
+Product length	96
 
+
+Primer pair 4
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	CGGTCGTAGTGGTGAGACAC	Plus	20	291	310	60.11	60.00	3.00	3.00
+Reverse primer	ACGAAGAAGAACCTTGCGGT	Minus	20	372	353	59.89	50.00	3.00	2.00
+Product length	82
+
+
+Primer pair 5
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	GAGCCTTGTCCCTGGTTTCA	Plus	20	6	25	59.89	55.00	3.00	1.00
+Reverse primer	AAGAACCTTGCGGTAAGCCA	Minus	20	366	347	59.89	50.00	5.00	1.00
+Product length	361
+
+
+Primer pair 6
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	TACGGCGCCGATCTAAAGTC	Plus	20	406	425	59.97	55.00	8.00	2.00
+Reverse primer	CACGGGTAACACCACTGCTA	Minus	20	514	495	59.68	55.00	3.00	2.00
+Product length	109
+
+
+Primer pair 7
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	TGGCTTACCGCAAGGTTCTT	Plus	20	347	366	59.89	50.00	5.00	3.00
+Reverse primer	ACGCATGAGTTCACGGGTAA	Minus	20	525	506	59.68	50.00	6.00	2.00
+Product length	179
+
+
+Primer pair 8
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	CTCGTACGTGGCTTTGGAGA	Plus	20	79	98	59.76	55.00	6.00	0.00
+Reverse primer	TGCCTTCGAGTTCTGCTACC	Minus	20	283	264	59.75	55.00	4.00	2.00
+Product length	205
+
+
+Primer pair 9
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	AGCTGGTGGCCATAGTTACG	Plus	20	390	409	59.82	55.00	6.00	2.00
+Reverse primer	CCTCCGTTAAGCTCACGCAT	Minus	20	539	520	60.46	55.00	4.00	2.00
+Product length	150
+
+
+Primer pair 10
+Sequence (5'->3')	Template strand	Length	Start	Stop	Tm	GC%	Self complementarity	Self 3' complementarity
+Forward primer	ATGCTCGAACTGCACCTCAT	Plus	20	224	243	59.75	50.00	4.00	2.00
+Reverse primer	GGACACCAAGTGTCTCACCA	Minus	20	319	300	59.53	55.00	7.00	0.00
+Product length	96
