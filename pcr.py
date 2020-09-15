@@ -10,3 +10,10 @@ with open('genome.txt', 'r') as file:
 	RNA = RNA.upper()
 
 	#DNA = find_compliment(RNA)
+
+	#get R primer and F primer (from Blast)
+	# R being the reverse of F
+
+	#Print the sequences to replicate
+
+	#run the replication function
