@@ -33,7 +33,8 @@ with open('genome.txt', 'r') as file:
 
 	#get R primer and F primer (from Blast)
 	# R being the reverse of F
+	# Format TBD
 
 	#Print the sequences to replicate
 
-	#run the replication function
+	#run the replication function for X Cycles
