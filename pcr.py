@@ -4,20 +4,21 @@
 
 
 
-def find_compliment(seq):
+def find_compliment(RNA):
 	#compliment the sequence
 
 	#dictionary for complimenting
 	compliment = {'A' : 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
 
 	#set original sequence to a list
-	bases = list(seq)
+	bases = list(RNA)
 
 	##replace each iteration against the dictionary
 	bases = [compliment[base] for base in bases]
 
 	#join back into a string
-	return ''.join(bases)
+	#and return as tuple (RNA, cDNA)
+	return (RNA,''.join(bases))
 
 
 ## Original Code for our section, nsp1 from https://www.ncbi.nlm.nih.gov/nuccore/NC_045512
@@ -29,12 +30,22 @@ with open('genome.txt', 'r') as file:
 
 	DNA = find_compliment(RNA)
 
-	# print(DNA) for testing the Find_Compliment
+	print(DNA)
 
 	#get R primer and F primer (from Blast)
 	# R being the reverse of F
-	# Format TBD
+	# Format ("Sequence", Starting Point, Ending Point, GC Content")
+
+	#Primer pair #2
+	fPrimer = ("TCGTACGTGGCTTTGGAGAC", 80, 99, 0.55)
+	rPrimer = ("AGATCGGCGCCGTAACTATG", 419, 400, 0.55)
 
 	#Print the sequences to replicate
+	# should be 340 long
+	print("\nReplicating: \nForward:")
+	print(DNA[0][fPrimer[1]:rPrimer[1]])
+	print("Reverse:")
+	print(DNA[1][fPrimer[1]:rPrimer[1]])
 
 	#run the replication function for X Cycles
+	
