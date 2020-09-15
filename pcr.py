@@ -28,6 +28,7 @@ with open('genome.txt', 'r') as file:
 	#convert to uppercase
 	RNA = RNA.upper()
 
+	#Tuple (RNA, cDNA)
 	DNA = find_compliment(RNA)
 
 	print(DNA)
@@ -48,4 +49,3 @@ with open('genome.txt', 'r') as file:
 	print(DNA[1][fPrimer[1]:rPrimer[1]])
 
 	#run the replication function for X Cycles
-	
