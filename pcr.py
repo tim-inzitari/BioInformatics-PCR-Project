@@ -77,6 +77,9 @@ with open('genome.txt', 'r') as file:
 	for _ in range(cycles):
 		andrew_pcr_run(forwardStrands,reverseStrands,fPrimerA,rPrimerA)
 
+	print("Total forward: "+str(len(forwardStrands))+"\n")
+	print("Total reverse: "+str(len(reverseStrands)) + "\n")
+
 	lengths = []
 
 	for strand in forwardStrands:
