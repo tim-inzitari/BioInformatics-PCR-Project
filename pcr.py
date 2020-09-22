@@ -104,5 +104,5 @@ with open('genome.txt', 'r') as file:
 	for strand in reverseStrands:
 		lengths.append(len(strand))
 
-	plt.hist(x, bins= 10)
+	plt.hist(lengths, bins= 30)
 	plt.show()
