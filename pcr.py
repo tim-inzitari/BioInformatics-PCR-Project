@@ -57,29 +57,12 @@ with open('genome.txt', 'r') as file:
 	cDNA = find_compliment(RNA)
 	cDNA = cDNA[::-1]
 
-	#Tuple (RNA, cDNA)
-	DNA = find_compliment(RNA)
-
-	#print(DNA) testing
-
-	#get R primer and F primer (from Blast)
-	# R being the reverse of F
-	# Format ("Sequence", Starting Point, Ending Point, GC Content")
-
 	# get a random sub string of size 150-250
 	rsRNA = RNA[randint(25,75):randint(225,275)]
-	print("Random subregion size: " + str(len(rsRNA))+"\n")
 
 	#Primer pair #2
-	fPrimer = (rsRNA[0:20], 81, 100, 0.55)
-	rPrimer = (find_compliment(rsRNA[len(rsRNA)-20:len(rsRNA)]), 246, 227, 0.55)
-
-	# #Print the sequences to replicate
-	# # should be 340 long
-	# print("\nReplicating: \n\nForward:")
-	# print(RNA[fPrimer[1]:rPrimer[1]])
-	# print("\nReverse:")
-	# print(DNA[fPrimer[1]:rPrimer[1]])
+	fPrimer = (rsRNA[0:20])
+	rPrimer = (find_compliment(rsRNA[len(rsRNA)-20:len(rsRNA)]))
 
 	# Doing this so that I can read all strands left to right
 	forwardStrands = []
@@ -94,8 +77,6 @@ with open('genome.txt', 'r') as file:
 	for _ in range(cycles):
 		andrew_pcr_run(forwardStrands,reverseStrands,fPrimerA,rPrimerA)
 
-	print("Total forward: "+str(len(forwardStrands))+"\n")
-	print("Total reverse: "+str(len(reverseStrands)))
 	lengths = []
 
 	for strand in forwardStrands:
