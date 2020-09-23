@@ -19,11 +19,6 @@ def find_compliment(RNA):
 	f = f.replace('x','G')
 	return f
 
-
-def pcr_run(DNA, fPrimer, rPrimer, cycles):
-	#Run PCR
-	return
-
 def andrew_pcr_run(forwardStrands,reverseStrands,fPrimer,rPrimer):
 
 	forwardSize = len(forwardStrands)
@@ -56,37 +51,45 @@ with open('genome.txt', 'r') as file:
 	RNA = RNA.upper()
 	cDNA = find_compliment(RNA)
 	cDNA = cDNA[::-1]
+	totalStrands = [0]*8
+	for i in range(8):
+		totalStrands[i] = [0]*cycles
 
-	# get a random sub string of size 150-250
-	rsRNA = RNA[randint(25,75):randint(225,275)]
+	for x in range (0,8):
+		# get a random sub string of size 150-250
+		rsRNA = RNA[25+x*10:325-x*10]
+		print("rsRNA length: " + str(len(rsRNA))+"\n")
 
-	#Primer pair #2
-	fPrimer = (rsRNA[0:20])
-	rPrimer = (find_compliment(rsRNA[len(rsRNA)-20:len(rsRNA)]))
+		#Primer pair #2
+		fPrimer = (rsRNA[0:20])
+		rPrimer = (find_compliment(rsRNA[len(rsRNA)-20:len(rsRNA)]))
 
-	# Doing this so that I can read all strands left to right
-	forwardStrands = []
-	forwardStrands.append(RNA)
-	reverseStrands = []
-	reverseStrands.append(cDNA)
+		# Doing this so that I can read all strands left to right
+		forwardStrands = []
+		forwardStrands.append(RNA)
+		reverseStrands = []
+		reverseStrands.append(cDNA)
 
-	# Same reason as above
-	fPrimerA = fPrimer[0]
-	rPrimerA = rPrimer[0][::-1]
+		# Same reason as above
+		fPrimerA = fPrimer
+		rPrimerA = rPrimer[::-1]
 
-	for _ in range(cycles):
-		andrew_pcr_run(forwardStrands,reverseStrands,fPrimerA,rPrimerA)
+		for y in range(cycles):
+			andrew_pcr_run(forwardStrands,reverseStrands,fPrimerA,rPrimerA)
+			totalStrands[x][y] = int(len(forwardStrands) + len(reverseStrands))
 
-	print("Total forward: "+str(len(forwardStrands))+"\n")
-	print("Total reverse: "+str(len(reverseStrands)) + "\n")
+		print("Total forward: "+str(len(forwardStrands))+"\n")
+		print("Total reverse: "+str(len(reverseStrands)) + "\n")
 
-	lengths = []
+		lengths = []
 
-	for strand in forwardStrands:
-		lengths.append(len(strand))
+		for strand in forwardStrands:
+			lengths.append(len(strand))
 
-	for strand in reverseStrands:
-		lengths.append(len(strand))
+		for strand in reverseStrands:
+			lengths.append(len(strand))
 
-	plt.hist(lengths, bins= 30)
-	plt.show()
+		# plt.hist(lengths, bins= 30)
+		# plt.show()
+
+	print(totalStrands)
