@@ -5,7 +5,7 @@ from random import randint
 import matplotlib.pyplot as plt
 
 # Parameters
-cycles = 10
+cycles = 20
 hangOffAllowance = 0
 copyLength = 200
 e = 50
@@ -73,14 +73,14 @@ with open('genome.txt', 'r') as file:
 
 
 		# Throw out any primers with GC content not within 40% <= GC <= 60%
-		while(((primer_GC > 0.6) or (primer_GC < 0.4)) and ((rPrimer_GC > 0.6) or (rPrimer_GC < 0.4))):
+		#while(((primer_GC > 0.6) or (primer_GC < 0.4)) and ((rPrimer_GC > 0.6) or (rPrimer_GC < 0.4))):
 			#Primer pair #2
-			fPrimer = (rsRNA[0:20])
-			rPrimer = (find_compliment(rsRNA[len(rsRNA)-20:len(rsRNA)]))
+		fPrimer = (rsRNA[0:20])
+		rPrimer = (find_compliment(rsRNA[len(rsRNA)-20:len(rsRNA)]))
 
 			# See if Acceptable GC for Primer
-			primer_GC = get_GC(fPrimer)
-			rPrimer_GC = get_GC(rPrimer)
+			#primer_GC = get_GC(fPrimer)
+			#rPrimer_GC = get_GC(rPrimer)
 
 
 		# Doing this so that I can rea#d all strands left to right
@@ -114,8 +114,11 @@ with open('genome.txt', 'r') as file:
 		for strand in reverseStrands:
 			lengths.append(len(strand))
 
-		# plt.hist(lengths, bins= 30)
-		# plt.show()
+		plt.hist(GC_List, bins= 30)
+		plt.title("Strand Count: {0}".format(len(forwardStrands)))
+		plt.xlabel("GC Count")
+		plt.ylabel("Occurances")
+		plt.show()
 
 	print(totalStrands)
 	print("Average GC Content is: {0}".format(sum(GC_List)/len(GC_List)))
